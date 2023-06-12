@@ -6,6 +6,8 @@ import {
   atualizaQuantidadeItem
 } from '@/_data/carrinho.js'
 
+import MButton from './MButton.vue'
+import MMessage from './MMessage.vue'
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
@@ -18,7 +20,7 @@ function formatarPreco(preco) {
 <div class="carrinho">
       <h2>Meu carrinho</h2>
       <div class="wrap-carrinho">
-        <p v-if="carrinho.itens.length === 0">Seu carrinho está vazio</p>
+        <m-message v-if="carrinho.itens.length === 0"/>
         <div v-else>
           <div class="item-carrinho" v-for="(item, index) in carrinho.itens" :key="index">
             <div class="info-livro">
@@ -48,6 +50,11 @@ function formatarPreco(preco) {
           </div>
         </div>
       </div>
+      <m-button texto="Limpar" />
+      <m-button texto="Fechar Carrinho" />
+      <m-button texto="Favoritos" />
+      <m-button texto="Continuar Comprando" />
+
         <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
       </div>
    
@@ -107,8 +114,8 @@ function formatarPreco(preco) {
   margin-right: 10px;
 }
 .container-geral {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 } 
 
 .carrinho {
