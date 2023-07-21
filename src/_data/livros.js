@@ -43,7 +43,7 @@ export const livros = [
   },
   {
     id: 7,
-    title: 'OA culpa é das estrelas',
+    title: 'A culpa é das estrelas',
     author: 'John Green',
     price: 27.9,
     img: 'https://m.media-amazon.com/images/I/41yToN1cOML._SX334_BO1,204,203,200_.jpg'
@@ -53,7 +53,7 @@ export const livros = [
     title: 'O milagre da manhã',
     author: 'Hal Elrod',
     price: 39.9,
-    img: 'https://m.media-amazon.com/images/I/81as3Dalt8L._AC_UY218_.jpg'
+    img: 'https://m.media-amazon.com/images/I/41zcA8iynSL._SY344_BO1,204,203,200_QL70_ML2_.jpg'
   },
   {
     id: 9,
@@ -64,23 +64,23 @@ export const livros = [
   },
   {
     id: 10,
-    title: 'Dom Quixote',
-    author: 'Miguel de Cervantes',
-    price: 39.9,
-    img: 'https://m.media-amazon.com/images/I/513uHO8IDlL._SX359_BO1,204,203,200_.jpg'
+    title: 'Saga Crepúsculo',
+    author: 'Stephenie Meyer',
+    price: 157.9,
+    img: 'https://m.media-amazon.com/images/I/71knlmW0lGL._AC_UY218_.jpg'
   },
   {
     id: 11,
-    title: 'O Conde de Monte Cristo',
-    author: 'Alexandre Dumas',
-    price: 69.9,
-    img: 'https://m.media-amazon.com/images/I/81ZswN9PVPL._AC_UL320_.jpg'
+    title: 'É assim que acaba',
+    author: 'Colleen Hoover',
+    price: 89.9,
+    img: 'https://m.media-amazon.com/images/I/51i7kH+rh9L._SX322_BO1,204,203,200_.jpg'
   },
   {
     id: 12,
-    title: 'O Hobbit',
-    author: 'J. R. R. Tolkien',
-    price: 39.9,
-    img: 'https://m.media-amazon.com/images/I/91M9xPIf10L._AC_UL320_.jpg'
+    title: 'Saga Harry Potter ',
+    author: 'J.K. Rowling',
+    price: 280.9,
+    img: 'https://m.media-amazon.com/images/I/51MSCS6s-cL._SX422_BO1,204,203,200_.jpg'
   }
 ]
