@@ -49,35 +49,35 @@ export const livros = [
     img: 'https://m.media-amazon.com/images/I/41yToN1cOML._SX334_BO1,204,203,200_.jpg'
   },
   {
-    id: 2,
-    title: 'O Senhor dos Anéis - Box completo',
-    author: 'J. R. R. Tolkien',
-    price: 129.9,
-    img: 'https://m.media-amazon.com/images/I/715afDdgKfL.jpg'
+    id: 8,
+    title: 'O milagre da manhã',
+    author: 'Hal Elrod',
+    price: 39.9,
+    img: 'https://m.media-amazon.com/images/I/81as3Dalt8L._AC_UY218_.jpg'
   },
   {
-    id: 3,
-    title: 'O Pequeno Príncipe',
-    author: 'Antoine de Saint-Exupéry',
-    price: 19.9,
-    img: 'https://m.media-amazon.com/images/I/41afCn3PQUL._SY344_BO1,204,203,200_QL70_ML2_.jpg'
+    id: 9,
+    title: 'Orgulho e preconceito',
+    author: 'Jane Austen',
+    price: 59.9,
+    img: 'https://m.media-amazon.com/images/I/81aqS7yeadL._AC_UY218_.jpg'
   },
   {
-    id: 4,
+    id: 10,
     title: 'Dom Quixote',
     author: 'Miguel de Cervantes',
     price: 39.9,
     img: 'https://m.media-amazon.com/images/I/513uHO8IDlL._SX359_BO1,204,203,200_.jpg'
   },
   {
-    id: 5,
+    id: 11,
     title: 'O Conde de Monte Cristo',
     author: 'Alexandre Dumas',
     price: 69.9,
     img: 'https://m.media-amazon.com/images/I/81ZswN9PVPL._AC_UL320_.jpg'
   },
   {
-    id: 6,
+    id: 12,
     title: 'O Hobbit',
     author: 'J. R. R. Tolkien',
     price: 39.9,
