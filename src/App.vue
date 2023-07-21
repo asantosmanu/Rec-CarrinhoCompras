@@ -7,7 +7,7 @@ import MeuCarrinho from '@/components/MeuCarrinho.vue'
 
 <template>
   
-  <h1>Minha livraria</h1>
+  <h1>MINHA LIVRARIA</h1>
   <div class="container-geral">
     <listagem-livros/>
    <meu-carrinho/>
@@ -19,7 +19,13 @@ import MeuCarrinho from '@/components/MeuCarrinho.vue'
 .container-geral {
   display: flex;
   justify-content: space-between;
-} 
+  background-color: rgb(172, 231, 172);
+}
+h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 
 
