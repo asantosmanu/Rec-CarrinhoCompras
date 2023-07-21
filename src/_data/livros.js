@@ -42,11 +42,11 @@ export const livros = [
     img: 'https://m.media-amazon.com/images/I/91M9xPIf10L._AC_UL320_.jpg'
   },
   {
-    id: 1,
-    title: 'O Poderoso Chefão',
-    author: 'Mario Puzo',
-    price: 49.9,
-    img: 'https://m.media-amazon.com/images/I/31jGFI5wX2L._SX331_BO1,204,203,200_.jpg'
+    id: 7,
+    title: 'OA culpa é das estrelas',
+    author: 'John Green',
+    price: 27.9,
+    img: 'https://m.media-amazon.com/images/I/41yToN1cOML._SX334_BO1,204,203,200_.jpg'
   },
   {
     id: 2,
