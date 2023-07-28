@@ -2,15 +2,18 @@
 
 import ListagemLivros from '@/components/ListagemLivros.vue'
 import MeuCarrinho from '@/components/MeuCarrinho.vue'
+import Favoritos from './components/Favoritos.vue';
 
 </script>
 
 <template>
   
   <h1>MINHA LIVRARIA</h1>
+  <router-view />
   <div class="container-geral">
     <listagem-livros/>
    <meu-carrinho/>
+   <favoritos/>
     </div>
 
 </template>
