@@ -11,11 +11,6 @@ const router = createRouter({
         name: 'home',
         component: HomeView
       },
-      {
-        path: 'fecharcomprasview',
-        name: 'fecharcomprasview',
-        component: FecharComprasView
-      }
     ]
 })
 
