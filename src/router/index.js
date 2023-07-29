@@ -10,6 +10,11 @@ const router = createRouter({
         path: '/',
         name: 'home',
         component: HomeView
+      },
+      {
+        path: 'fecharcomprasview',
+        name: 'fecharcomprasview',
+        component: FecharComprasView
       }
     ]
 })
