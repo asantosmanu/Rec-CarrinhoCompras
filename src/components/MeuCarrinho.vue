@@ -51,9 +51,8 @@ function formatarPreco(preco) {
         </div>
       </div>
       <m-button texto="Limpar" />
-      <m-button texto="Fechar Carrinho" />
-      <m-button texto="Favoritos" />
-      <m-button texto="Continuar Comprando" />
+      <m-button texto="Finalizar compra" @click="$router.push({name: 'fecharcompras'})"/>      <m-button texto="Favoritos" />
+      <m-button texto="Continuar Comprando" @click="$router.push({name: 'homeview'})" />
 
         <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
         
