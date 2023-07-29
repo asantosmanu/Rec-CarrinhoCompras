@@ -98,89 +98,95 @@ const mensagemErro = computed(() => {
 </div>
    <div class="forms">
     <form class="container" @submit.prevent="ok = validar()">
-    <input type="file" id="avatarField" @change="handleFileUpload($event)" />
-    <hr>
     <div>
-      <h1>INSIRA SUAS INFORMAÇÕES PARA CONCLUIR A COMPRA</h1>
-      <label for="">Nome: </label>
+      <h1 class="titleform">INSIRA SUAS INFORMAÇÕES PARA CONCLUIR A COMPRA</h1>
+      <h2 class="sectitle">Dados de contato:</h2>
+      <label for="">Nome Completo: </label>
       <input type="text" class="input" v-on:keypress="ok = false" v-model="nome" placeholder="Insira seu nome" required />
-      <hr>
-      <label for="sexo">Sexo: </label>
-      <input type="radio" v-model="sexo" value="masculino" /> Masculino
-      <input type="radio" class="input" v-model="sexo" value="feminino" /> Feminino
-      <hr>
-      <label for="">Data de nascimento: </label>
-      <input type="date" class="input" v-on:keypress="ok = false" v-model="data" placeholder="insira sua data" required />
       <hr>
       <label for="">Email: </label>
       <input type="email" class="input" v-on:keypress="ok = false" v-model="email" placeholder="insira seu email"
         required />
       <hr>
-      <label for="">Endereço: </label>
-      <input type="text" class="input" v-on:keypress="ok = false" v-model="endereco" placeholder="insira seu endereço" />
-      <hr>
+      <label for="">Senha: </label>
+        <input type="password" class="input" v-on:keypress="ok = false" v-model="senha" placeholder="insira sua senha"
+          minlength="6" required />
+        <hr>
+        <label for="">Confirmar senha: </label>
+        <input type="password" class="input" v-on:keypress="ok = false" v-model="confirmacao"
+          placeholder="insira sua senha novamente" minlength="6" required />
+      <h2 class="sectitle">Endereço de Entrega:</h2>
       <div>
+        <label for="">Endereço: </label>
+        <input type="text" class="input" v-on:keypress="ok = false" v-model="endereco" placeholder="insira seu endereço" required />
+        <hr>
         <label for="">Cidade: </label>
-        <input type="text" class="input" v-on:keypress="ok = false" v-model="cidade" placeholder="insira sua cidade" />
+        <input type="text" class="input" v-on:keypress="ok = false" v-model="cidade" placeholder="insira sua cidade" required />
         <hr>
         <label for="estado">Estado: </label>
-        <select v-on:keypress="ok = false" v-model="estado" class="input">
+        <select v-on:keypress="ok = false" v-model="estado" class="input" required>
           <option value="AC">Acre</option>
           <option value="AL">Alagoas</option>
           <option value="AP">Amapá</option>
           <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goías</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roráima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
         </select>
+        <h2 class="sectitle">Formas de pagamento:</h2>
+        <label for="estado">Pagamento por: </label>
+        <select v-on:keypress="ok = false" v-model="pagamento" class="input" required>
+          <option value="CC">Cartão</option>
+          <option value="BO">Boleto</option>
+          <option value="PI">Pix</option></select>  
+         <h2 class="sectitle">Observações:</h2>
+        <label for="">Registre aqui qualquer obs sobre a loja: </label>
+        <input type="text" class="input" v-on:keypress="ok = false" v-model="obs" style="padding: 20px;"
+          placeholder="...(Opcional)" />
         <hr>
-        <label for="hobbie">hobbies:</label>
-        <input type="checkbox" v-model="cores" value="esportes" /> Esportes
-        <input type="checkbox" v-model="cores" value="ler" /> Ler
-        <input type="checkbox" v-model="cores" value="escrever" /> Escrever
-        <input type="checkbox" v-model="cores" value="viagens" /> Viagens
-        <input type="checkbox" v-model="cores" value="cozinhar" /> Cozinhar
-        <input type="checkbox" v-model="cores" value="pintar" /> Pintar    
-         <hr>
-        <label for="">Linguagem de programação: </label>
-        <input type="text" class="input" v-on:keypress="ok = false" v-model="linguagem"
-          placeholder="insira uma linguagem de programação" />
-        <hr>
-        <label for="">Biografia: </label>
-        <input type="text" class="input" v-on:keypress="ok = false" v-model="biografia" style="padding: 20px;"
-          placeholder="insira sua biografia" />
-        <hr>
-        <label for="">Senha: </label>
-        <input type="password" class="input" v-on:keypress="ok = false" v-model="senha" placeholder="insira sua senha"
-          minlength="6" />
-        <hr>
-        <label for="">Confirmar senha: </label>
-        <input type="password" class="input" v-on:keypress="ok = false" v-model="confirmacao"
-          placeholder="insira sua senha novamente" minlength="6" />
-        <hr>
+
       </div>
       <button class="botao" type="submit">Mostrar</button>
     </div>
     <p>{{ mensagemErro }}</p>
   </form>
+    <div class="dadosfinais">
     <div v-if="ok" class="container">
-      <img :src="user.avatar" class="img" />
       <p>O nome inserido foi: {{ nome }}</p>
-      <p>A data inserida foi: {{ data }}</p>
       <p>O email inserido foi: {{ email }}</p>
-      <p>Sexo: {{ sexo }}</p>
+      <p>A senha inserida foi: {{ senha }}</p>
+      <p>A confirmação da senha inserida foi: {{ confirmacao }}</p>
       <p>O endereço inserido foi: {{ endereco }}</p>
       <p>A cidade inserida foi: {{ cidade }}</p>
       <p>O estado inserido foi: {{ estado }}</p>
-      <p>Selecione seus hobbies: {{ hobbie }}</p>
-      <p>A linguagem inserida foi: {{ linguagem }}</p>
-      <p>A biografia inserida foi: {{ biografia }}</p>
-      <p>A senha inserida foi: {{ senha }}</p>
-      <p>A confirmação da senha inserida foi: {{ confirmacao }}</p>
+      <p>A forma de pagamento inserido foi: {{ pagamento }}</p>
+      <p>Obs:{{ obs }}</p>
     </div>
    </div>
+  </div>
 </template>
 
 
 <style scoped>
-
 .container {
   display: flex;
   position: absolute;
@@ -188,15 +194,15 @@ const mensagemErro = computed(() => {
   flex-direction: column;
   top: 5%;
   nav-down: 20%;
-  left: 50%;
+  left: 20%;
   right: 0%;
   align-items: center;
   padding: 15px;
   margin: 0 auto;
-  color: white;
+  color: rgb(255, 255, 255);
   align-items: center;
   margin: 0 auto;
-  margin-top: 23%;
+  margin-top: 5%;
   border-radius: 0px;
   width: 50%;
   background-color: rgb(94, 132, 155);
@@ -215,6 +221,15 @@ const mensagemErro = computed(() => {
 
 .input {
   background-color: rgb(255, 255, 255);
+}
+.titleform{
+  color: rgb(255, 255, 255);
+}
+.sectitle{
+  color: rgb(0, 0, 0);
+}
+.dadosfinais{
+  color: black;
 }
 
 
