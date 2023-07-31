@@ -23,7 +23,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(5, 49, 5);
+    background-color: rgb(5, 49, 5)
 }
 
 </style>

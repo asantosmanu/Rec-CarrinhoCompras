@@ -32,4 +32,9 @@ const carrinho = ref({
       carrinho.value.total += livro.price
     }
   }
-  export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem }
+
+  function limparCarrinho (){
+    carrinho.value.itens = [],
+    carrinho.value.total = 0
+  }
+  export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, limparCarrinho }

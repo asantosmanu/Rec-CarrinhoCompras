@@ -1,9 +1,9 @@
 <script setup>
+import MButton from '@/components/MButton.vue'
+
+
 import {
-  carrinho,
-  adicionarAoCarrinho,
-  removerItemCarrinho,
-  atualizaQuantidadeItem
+  carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, limparCarrinho 
 } from '@/_data/carrinho.js'
 
 function formatarPreco(preco) {
@@ -88,14 +88,12 @@ const mensagemErro = computed(() => {
               </div>
             </div>
           </div>
-        </div>
+        </div>    
       </div>
-      <m-button texto="Limpar" />
-      <m-button texto="Fechar carrinho" @click="$router.push({name: 'fecharcompras'})"/>      <m-button texto="Favoritos" />
-      <m-button texto="Continuar Comprando" @click="$router.push({name: 'homeview'})" />
+      <m-button @click="limparCarrinho()" texto="Limpar carrinho" />
+      <m-button texto="Continuar Comprando" @click="$router.push({name: 'home'})" />    
 
-    <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
-</div>
+    </div>
    <div class="forms">
     <form class="container" @submit.prevent="ok = validar()">
     <div>
@@ -115,6 +113,7 @@ const mensagemErro = computed(() => {
         <label for="">Confirmar senha: </label>
         <input type="password" class="input" v-on:keypress="ok = false" v-model="confirmacao"
           placeholder="insira sua senha novamente" minlength="6" required />
+          <hr>
       <h2 class="sectitle">Endereço de Entrega:</h2>
       <div>
         <label for="">Endereço: </label>
@@ -152,12 +151,14 @@ const mensagemErro = computed(() => {
           <option value="SE">Sergipe</option>
           <option value="TO">Tocantins</option>
         </select>
+        <hr>
         <h2 class="sectitle">Formas de pagamento:</h2>
         <label for="estado">Pagamento por: </label>
         <select v-on:keypress="ok = false" v-model="pagamento" class="input" required>
           <option value="CC">Cartão</option>
           <option value="BO">Boleto</option>
           <option value="PI">Pix</option></select>  
+          <hr>
          <h2 class="sectitle">Observações:</h2>
         <label for="">Registre aqui qualquer obs sobre a loja: </label>
         <input type="text" class="input" v-on:keypress="ok = false" v-model="obs" style="padding: 20px;"
@@ -165,12 +166,15 @@ const mensagemErro = computed(() => {
         <hr>
 
       </div>
-      <button class="botao" type="submit">Mostrar</button>
+      <button class="botao" type="submit">Finalizar</button>
     </div>
     <p>{{ mensagemErro }}</p>
   </form>
     <div class="dadosfinais">
     <div v-if="ok" class="container">
+      <h1 class="final">Finalizado com sucesso!</h1>
+      <p class="carrinho-total">Total da compra: {{ formatarPreco(carrinho.total) }}</p>
+      <p>Dados inseridos:</p>
       <p>O nome inserido foi: {{ nome }}</p>
       <p>O email inserido foi: {{ email }}</p>
       <p>A senha inserida foi: {{ senha }}</p>
@@ -231,9 +235,27 @@ const mensagemErro = computed(() => {
 .dadosfinais{
   color: black;
 }
+.final{
+  color: black;
+}
 
 
 
+.carrinho-total{
+  color: black;
+}
+.continuecomp{
+  background-color: darkgreen;
+    color: white;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.continuecomp:hover {
+    background-color: rgb(5, 49, 5)
+}
 .wrap-carrinho .carrinho-total {
   position: fixed;
   bottom: 3%;

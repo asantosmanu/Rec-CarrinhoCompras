@@ -3,7 +3,8 @@ import {
   carrinho,
   adicionarAoCarrinho,
   removerItemCarrinho,
-  atualizaQuantidadeItem
+  atualizaQuantidadeItem,
+  limparCarrinho
 } from '@/_data/carrinho.js'
 
 import MButton from './MButton.vue'
@@ -48,13 +49,12 @@ function formatarPreco(preco) {
               </div>
             </div>
           </div>
+          <m-button texto="Finalizar compra" @click="$router.push({name: 'fecharcompras'})"/>
+          <m-button @click="limparCarrinho()" texto="Limpar carrinho" />
         </div>
-      </div>
-      <m-button texto="Limpar" />
-      <m-button texto="Finalizar compra" @click="$router.push({name: 'fecharcompras'})"/>      <m-button texto="Favoritos" />
-      <m-button texto="Continuar Comprando" @click="$router.push({name: 'homeview'})" />
-
-        <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
+      </div>   
+      
+      <p class="carrinho-total">Total: {{ formatarPreco(carrinho.total) }}</p>
         
 </div>
    
