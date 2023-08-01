@@ -23,12 +23,15 @@ function formatarPreco(preco) {
         </div>
         <div class="card-buttons-livros">
           <m-button @click="adicionarAoCarrinho(props.livro)" texto="&#128722;" />
+          <m-button @click="favoritar(props.livro)" texto="🤍" />
         </div>
       </div>
     
 
 </template>
-
+import {
+  carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, limparCarrinho 
+} from '@/_data/carrinho.js'
 <style scoped>
 
 
