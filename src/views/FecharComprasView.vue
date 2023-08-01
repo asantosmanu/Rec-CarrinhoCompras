@@ -91,9 +91,8 @@ const mensagemErro = computed(() => {
         </div>    
       </div>
       <m-button @click="limparCarrinho()" texto="Limpar carrinho" />
-      <m-button texto="Continuar Comprando" @click="$router.push({name: 'home'})" />    
+      <m-button texto="Voltar" @click="$router.push({name: 'home'})" />    
 
-    </div>
    <div class="forms">
     <form class="container" @submit.prevent="ok = validar()">
     <div>
@@ -187,6 +186,7 @@ const mensagemErro = computed(() => {
     </div>
    </div>
   </div>
+</div>
 </template>
 
 
@@ -210,6 +210,7 @@ const mensagemErro = computed(() => {
   border-radius: 0px;
   width: 50%;
   background-color: rgb(94, 132, 155);
+  box-shadow: 5px 10px 8px #888888;
 }
 
 .botao {
@@ -320,7 +321,7 @@ const mensagemErro = computed(() => {
   flex-wrap: wrap;
 }
 .title{
-  color: rgb(94, 132, 155);
+  color: rgb(0, 0, 0);
 }
 
 </style>

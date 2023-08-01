@@ -127,6 +127,6 @@ function formatarPreco(preco) {
   flex-wrap: wrap;
 }
 .title{
-  color: rgb(94, 132, 155);
+  color: rgb(0, 0, 0);
 }
 </style>

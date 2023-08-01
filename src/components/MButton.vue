@@ -13,7 +13,7 @@ const props = defineProps({
 <style scoped>
 
 button {
-    background-color: darkgreen;
+    background-color: rgb(0, 0, 0);
     color: white;
     font-size: 1.1rem;
     border: 1px solid #ccc;
@@ -23,7 +23,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(5, 49, 5)
+    background-color: rgb(43, 40, 40)
 }
 
 </style>

@@ -38,7 +38,7 @@ import {
 .card-livro {
   margin: 5px 10px;
   padding: 10px;
-  background-color: beige;
+  background-color: white;
   border-radius: 10px;
   width: 180px;
   display: flex;
@@ -50,7 +50,7 @@ import {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgb(253, 253, 253);
   border-radius: 10px;
   width: 180px;
   height: 270px;
