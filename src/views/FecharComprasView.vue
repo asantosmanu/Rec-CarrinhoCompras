@@ -58,7 +58,7 @@ const mensagemErro = computed(() => {
 
 <template>
 <div class="carrinho">
-      <h1 class="title">CARRINHO	&#128722;</h1>
+      <h1 class="title">SEU CARRINHO	&#128722;</h1>
       <div class="wrap-carrinho">
         <m-message v-if="carrinho.itens.length === 0"/>
         <div v-else>
@@ -159,9 +159,9 @@ const mensagemErro = computed(() => {
           <option value="PI">Pix</option></select>  
           <hr>
          <h2 class="sectitle">Observações:</h2>
-        <label for="">Registre aqui qualquer obs sobre a loja: </label>
+        <label for="">Está satisfeito(a)? Registre aqui qualquer obs sobre a loja: </label>
         <input type="text" class="input" v-on:keypress="ok = false" v-model="obs" style="padding: 20px;"
-          placeholder="...(Opcional)" />
+          placeholder="Deixe seu feedback" />
         <hr>
 
       </div>
@@ -171,9 +171,9 @@ const mensagemErro = computed(() => {
   </form>
     <div class="dadosfinais">
     <div v-if="ok" class="container">
-      <h1 class="final">Finalizado com sucesso!</h1>
+      <h1 class="final">Compra finalizada com sucesso!</h1>
       <p class="carrinho-total">Total da compra: {{ formatarPreco(carrinho.total) }}</p>
-      <p>Dados inseridos:</p>
+      <p class="dados">Dados inseridos:</p>
       <p>O nome inserido foi: {{ nome }}</p>
       <p>O email inserido foi: {{ email }}</p>
       <p>A senha inserida foi: {{ senha }}</p>
@@ -210,8 +210,7 @@ const mensagemErro = computed(() => {
   border-radius: 0px;
   width: 50%;
   background-color: rgb(94, 132, 155);
-  box-shadow: 5px 10px 8px #888888;
-}
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2);}
 
 .botao {
   align-items: center;
@@ -239,11 +238,15 @@ const mensagemErro = computed(() => {
 .final{
   color: black;
 }
-
+.dados{
+  color: black;
+  font-size: large;
+}
 
 
 .carrinho-total{
   color: black;
+  font-size:x-large;
 }
 .continuecomp{
   background-color: darkgreen;
@@ -315,6 +318,7 @@ const mensagemErro = computed(() => {
 
 .carrinho {
   min-width: 20%;
+  margin-bottom: 100%;
 }
 .listagem-livros {
   display: flex;
