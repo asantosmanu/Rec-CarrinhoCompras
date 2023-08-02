@@ -88,9 +88,9 @@ const mensagemErro = computed(() => {
               </div>
             </div>
           </div>
+          <m-button @click="limparCarrinho()" texto="Limpar carrinho" />
         </div>    
       </div>
-      <m-button @click="limparCarrinho()" texto="Limpar carrinho" />
       <m-button texto="Voltar" @click="$router.push({name: 'home'})" />    
 
    <div class="forms">
