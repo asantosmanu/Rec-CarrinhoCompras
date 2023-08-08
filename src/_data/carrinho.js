@@ -2,8 +2,15 @@ import { ref } from 'vue'
 
 const carrinho = ref({
     itens: [],
-    total: 0
+    total: 0,
+    dadosComprador: {},
+    dadosCompradorOk: false,
   })
+  
+  function atualizarDadosComprador(form) {
+    Object.assign(carrinho.value.dadosComprador, form)
+    carrinho.value.dadosCompradorOK = true
+  }
   
   function atualizaQuantidadeItem(item) {
     carrinho.value.total -= item.total
@@ -37,4 +44,4 @@ const carrinho = ref({
     carrinho.value.itens = [],
     carrinho.value.total = 0
   }
-  export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, limparCarrinho }
+  export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, limparCarrinho, atualizarDadosComprador }

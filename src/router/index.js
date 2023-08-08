@@ -4,7 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import FormView from '../views/FormView.vue'
 import FavoritosView from '../views/FavoritosView.vue'
 import ProximaView from '../views/ProximaView.vue'
-import ConcluirCompraView from '../views/ConcluirCompraView.vue'
+// import ConcluirCompraView from '../views/ConcluirCompraView.vue'
 
 
 
