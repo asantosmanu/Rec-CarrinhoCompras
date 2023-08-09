@@ -1,13 +1,23 @@
-<script>
+<script setup>
 import ConcluirCompraView from '../views/ConcluirCompraView.vue'
+import {
+  carrinho,
+  adicionarAoCarrinho,
+  removerItemCarrinho,
+  atualizaQuantidadeItem,
+  limparCarrinho
+} from '@/_data/carrinho.js'
 
 </script>
 
 <template>
-    <h1>DEUU</h1>
+<div class="hs">
+    <h1>Nós agradecemos sua preferência!</h1>
+</div>
 
     <div class="carrinho">
-        <h1 class="title">SEU CARRINHO &#128722;</h1>
+        <h1 class="title">🚚 SUA COMPRA ESTÁ A CAMINHO...</h1>
+        <h2>A entrega chegará em no máximo 5 dias</h2>
         <div class="wrap-carrinho">
             <m-message v-if="carrinho.itens.length === 0" />
             <div v-else>
@@ -41,6 +51,25 @@ import ConcluirCompraView from '../views/ConcluirCompraView.vue'
 </template>
 
 <style scoped>
+h1{
+    margin-left: 60px;
+    background-color: aliceblue;
+    color: rgb(94, 132, 155);
+    padding: 12px;
+    border-radius: 10px;
+}
+h2{
+    margin-left: 60px;
+    margin-top: 5px;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+}
+
+.carrinho{
+    margin-right: 400px;
+    margin-top: 200px;
+    background-color: rgb(94, 132, 155);
+}
 .carrinho-total{
 color: black;
 font-size:x-large;
@@ -128,7 +157,7 @@ display: flex;
 flex-wrap: wrap;
 }
 .title{
-color: rgb(0, 0, 0);
+color: rgb(94, 132, 155);
 }
 
 

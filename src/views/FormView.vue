@@ -18,6 +18,7 @@ const form = ref({
   biografia: '',
   senha: '',
   confirmacao: '',
+  cep:'',
   sexo: '',
   ok: false,
   cores: [],
@@ -77,6 +78,10 @@ function irProximo() {
           <input type="text" class="input" v-on:keypress="ok = false" v-model="form.endereco" placeholder="insira seu endereço"
             required />
           <hr>
+          <label for="">CEP: </label>
+        <input type="password" class="input" v-on:keypress="ok = false" v-model="form.cep"
+          placeholder="insira o CEP" minlength="8" maxlength="8" required />
+        <hr>
           <label for="">Cidade: </label>
           <input type="text" class="input" v-on:keypress="ok = false" v-model="form.cidade" placeholder="insira sua cidade"
             required />
