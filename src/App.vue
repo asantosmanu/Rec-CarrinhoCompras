@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <h1 class="h1Titulo">BOOKSTORE 🕮</h1>
+  <h1 class="h1Titulo">BOOKSTORE 📖</h1>
   <div class="container-geral">
     <router-view />
   </div>

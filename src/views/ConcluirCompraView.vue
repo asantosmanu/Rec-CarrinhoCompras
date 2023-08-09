@@ -2,10 +2,8 @@
 import ConcluirCompraView from '../views/ConcluirCompraView.vue'
 import {
   carrinho,
-  adicionarAoCarrinho,
   removerItemCarrinho,
   atualizaQuantidadeItem,
-  limparCarrinho
 } from '@/_data/carrinho.js'
 
 </script>
