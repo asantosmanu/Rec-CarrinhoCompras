@@ -59,7 +59,7 @@ const mensagemErro = computed(() => {
 
 <template>
 <div class="carrinho">
-<h1 class="title">SEU CARRINHO &#128722;</h1>
+<h1 class="title">SUAS COMPRAS &#128722;</h1>
 <div class="wrap-carrinho">
 <m-message v-if="carrinho.itens.length === 0"/>
 <div v-else>
@@ -83,16 +83,13 @@ v-model="item.quantidade"
 min="1"
 />
 </p>
-<button @click="removerItemCarrinho(item)">&#128465;</button>
 <p>Total: {{ formatarPreco(item.total) }}</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<m-button texto="Voltar" @click="$router.push({name: 'home'})" />
-<m-button @click="limparCarrinho()" texto="Limpar carrinho" />
-</div>
+  </div>
 </div>
 
 <div class="forms">

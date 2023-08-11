@@ -3,9 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import FormView from '../views/FormView.vue'
 import FavoritosView from '../views/FavoritosView.vue'
-import ConcluirCompraView from '../views/ConcluirCompraView.vue'
-
-
 
 
 const router = createRouter({
@@ -26,11 +23,6 @@ const router = createRouter({
         name: 'favoritos',
         component: FavoritosView
       },
-      {
-        path: '/concluirCompra',
-        name: 'concluirCompra',
-        component: ConcluirCompraView
-      }
     ]
 })
 
