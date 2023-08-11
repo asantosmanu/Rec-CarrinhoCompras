@@ -4,6 +4,8 @@ import { adicionarAoCarrinho } from '@/_data/carrinho.js';
 const props = defineProps({
     livro: Object
 })
+import { adicionarFavoritar } from '@/_data/favoritar.js';
+
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
@@ -23,7 +25,7 @@ function formatarPreco(preco) {
         </div>
         <div class="card-buttons-livros">
           <m-button @click="adicionarAoCarrinho(props.livro)" texto="&#128722;" />
-          <m-button @click="favoritar(props.livro)" texto="🤍" />
+          <m-button @click="adcionarFavoritar(props.livro)" texto="🤍" />
         </div>
       </div>
     
